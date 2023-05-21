@@ -24,7 +24,7 @@ public class Main {
             for (int i = index; i < numbers.length; i++) {
                 Main.changeNumbers(numbers, index, i);
                 Main.generateCombination(numbers, index + Main.one);
-                Main.changeNumbers(numbers, index, Main.one);
+                Main.changeNumbers(numbers, index, i);
             }
         }
     }
@@ -36,10 +36,10 @@ public class Main {
     }
 
     static void printArray(int[] numbers) {
-        String combination = " ";
+        StringBuilder combination = new StringBuilder(" ");
         if (numbers [Main.zero] == 5 && numbers [Main.one] == 3 && numbers [Main.four] == 7){
             for (int number : numbers) {
-                combination += number;
+                combination.append(number);
             }
             System.out.println(combination);
         }
