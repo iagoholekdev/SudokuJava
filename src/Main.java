@@ -17,14 +17,14 @@ public class Main {
         Main.generateCombination(numbers, Main.zero);
     }
 
-    static void generateCombination(int[] numeros, int index) {
-        if (index == numeros.length - Main.one) {
-            Main.printArray(numeros);
+    static void generateCombination(int[] numbers, int index) {
+        if (index == numbers.length - Main.one) {
+            Main.printArray(numbers);
         } else {
-            for (int i = index; i < numeros.length; i++) {
-                Main.changeNumbers(numeros, index, i);
-                Main.generateCombination(numeros, index + Main.one);
-                Main.changeNumbers(numeros, index, Main.one);
+            for (int i = index; i < numbers.length; i++) {
+                Main.changeNumbers(numbers, index, i);
+                Main.generateCombination(numbers, index + Main.one);
+                Main.changeNumbers(numbers, index, Main.one);
             }
         }
     }
